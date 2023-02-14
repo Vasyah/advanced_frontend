@@ -12,4 +12,7 @@ export interface BuildPaths {
 export interface BuildOptions {
     mode: BuildMode
     paths: BuildPaths
+    // порт для dev-serve
+    port: number
+
 }

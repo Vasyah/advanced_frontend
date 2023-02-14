@@ -1,1 +1,0 @@
-export const multiply = () => console.log('function')

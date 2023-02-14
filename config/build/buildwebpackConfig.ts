@@ -8,6 +8,7 @@ import {buildDevServer} from "./buildDevServer";
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
     const {mode, paths} = options
     return {
+        mode: mode,
         // точка входа
         entry: paths.entry,
 
@@ -30,10 +31,9 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
 
         plugins: buildPlugins(options),
 
+        // включение source-map для оптимиации процесса отладки во время разработки
         devtool: 'inline-source-map',
 
         devServer: buildDevServer(options),
-
-        mode: mode
     }
 }

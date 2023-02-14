@@ -14,5 +14,6 @@ export interface BuildOptions {
     paths: BuildPaths
     // порт для dev-serve
     port: number
+    isDev: boolean,
 
 }

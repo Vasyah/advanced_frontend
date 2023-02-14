@@ -15,5 +15,9 @@ export interface BuildOptions {
     // порт для dev-serve
     port: number
     isDev: boolean,
+}
 
+export interface BuildEnv {
+    mode: BuildMode
+    port: number
 }

@@ -32,7 +32,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
         plugins: buildPlugins(options),
 
         // включение source-map для оптимиации процесса отладки во время разработки
-        devtool: 'inline-source-map',
+        devtool: options.isDev ? 'inline-source-map' : undefined,
 
         devServer: buildDevServer(options),
     }

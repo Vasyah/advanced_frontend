@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack serve"
+    "build:prod": "webpack --env mode=production",
+    "build:dev": "webpack --env mode=development --env port=3000",
+    "start": "webpack serve --env mode=development --env port=3000"
   },
   "keywords": [],
   "author": "",

@@ -1,10 +1,10 @@
 import {multiply} from "./test";
 import {render} from "react-dom";
-import {Counter} from "./components/Counter/Counter";
+import {App} from "./components/App/App";
 
 multiply()
 
 render(
-    <Counter/>,
+    <App/>,
     document.getElementById('root')
 )

@@ -13,7 +13,13 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
             {
                 loader: "css-loader",
                 options: {
-                    modules: true
+                    // подключить css-modules
+                    modules: {
+                        // какие файлы считать модулями
+                        auto: (restPath: string) => Boolean(restPath.includes('.module')),
+                        // имена файлов
+                        localIdentName: options.isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
+                    },
                 }
             },
             // Compiles Sass to CSS

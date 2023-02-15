@@ -24,7 +24,8 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
             // здесь конфигуриуем loaders, здесь происходит любая обработка файлов
             // выходящих за рамки js
             // изображения, шрифты
-            rules: buildLoaders(),
+            rules:
+                buildLoaders(options),
         },
 
         resolve: buildResolvers(),

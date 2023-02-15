@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react'
-import './styles.scss'
+import cx from './styles.module.scss'
 
 export interface ICounter {
 }
@@ -14,7 +14,7 @@ export const Counter: FC<ICounter> = (props: ICounter) => {
         <div>
             <h1>{value}</h1>
             <div>
-                <button onClick={incrementValue}>incement value</button>
+                <button onClick={incrementValue} className={cx.green}>incement value</button>
             </div>
         </div>
     );

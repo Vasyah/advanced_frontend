@@ -1,10 +1,10 @@
 import React, {FC, Suspense} from 'react'
 import '../../index.scss'
 import {Link, Route, Routes} from 'react-router-dom';
-import {AboutPageLazy} from "pages/AboutPage/AboutPageLazy";
-import {MainPageLazy} from "pages/MainPage/MainPageLazy";
 import {useTheme} from "app/providers/ThemeProvider";
 import {classNames} from "helpers/classNames";
+import {AboutPage} from "pages/AboutPage/ui/AboutPage";
+import {MainPageLazy} from "pages/MainPage/ui/MainPageLazy";
 
 export interface IApp {
 }
@@ -23,7 +23,7 @@ export const App: FC<IApp> = (props: IApp) => {
             <br/>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path={'about'} element={<AboutPageLazy/>}/>
+                    <Route path={'about'} element={<AboutPage/>}/>
                     <Route path={'/'} element={<MainPageLazy/>}/>
                 </Routes>
             </Suspense>

@@ -8,6 +8,7 @@ export const buildResolvers = (options: BuildOptions): webpack.ResolveOptions =>
         preferAbsolute: true,
         modules: [options.paths.src, 'node_modules'],
         mainFiles: ['index'],
+        // если указать alias, тогда можно через символ указать путь @ - path/path1/
         alias: {}
     }
 }

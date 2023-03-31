@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react'
-import {ThemeContext} from "./ThemeContext";
-import {useTheme} from "./useTheme";
+import {useTheme} from "app/providers/ThemeProvider/lib/useTheme";
+import { ThemeContext } from '../lib/ThemeContext';
 
 export interface IThemeProvider {
     children: React.ReactNode

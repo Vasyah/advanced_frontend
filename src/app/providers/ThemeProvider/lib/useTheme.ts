@@ -11,6 +11,7 @@ const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme ?? T
 
 export function useTheme() {
     const [theme, setTheme] = useState<Theme>(defaultTheme)
+
     const toggleTheme = () => {
         const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
         setTheme(newTheme)

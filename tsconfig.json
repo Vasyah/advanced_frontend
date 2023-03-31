@@ -15,7 +15,15 @@
     "esModuleInterop": true,
     //    позволяет синтетически сделать импорты более удобными import path from 'path' вместо import * as path from 'path'
     //   делает возможными использовать default импорт для библиотек у которых его нет
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+//    добавили для упрощения импортов, при использовании feature-sliced
+    "baseUrl": ".",
+    "paths": {
+      //      все абсолютные экспорты/импорты будут идти из папки src
+      "*": [
+        "./src/*"
+      ]
+    }
   },
   "ts-node": {
     "compilerOptions": {

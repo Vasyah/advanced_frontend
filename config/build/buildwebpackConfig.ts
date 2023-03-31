@@ -28,7 +28,7 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
                 buildLoaders(options),
         },
 
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
 
         plugins: buildPlugins(options),
 

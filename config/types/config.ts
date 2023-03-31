@@ -7,6 +7,8 @@ export interface BuildPaths {
     build: string;
     // путь до файла html
     html: string;
+    //
+    src: string
 }
 
 export interface BuildOptions {

@@ -1,9 +1,10 @@
 import React, {FC, Suspense} from 'react'
-import '../../../index.scss'
+import '../../index.scss'
 import {Link, Route, Routes} from 'react-router-dom';
-import {AboutPageLazy} from "../../pages/AboutPage/AboutPageLazy";
-import {MainPageLazy} from "../../pages/MainPage/MainPageLazy";
-import {useTheme} from "../../theme/useTheme";
+import {AboutPageLazy} from "pages/AboutPage/AboutPageLazy";
+import {MainPageLazy} from "pages/MainPage/MainPageLazy";
+import {useTheme} from "app/providers/ThemeProvider";
+import {classNames} from "helpers/classNames";
 
 export interface IApp {
 }
@@ -11,8 +12,9 @@ export interface IApp {
 
 export const App: FC<IApp> = (props: IApp) => {
     const {theme, toggleTheme} = useTheme()
+
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <button onClick={toggleTheme}>Toggle theme</button>
             <Link to={'/'}>Main page</Link>
             <hr/>

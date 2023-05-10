@@ -1,0 +1,20 @@
+.Button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.clear {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.primary {
+  color: var(--primary-color);
+  border-radius: 4px;
+  background: var(--inverted-primary-color);
+  padding: 8px 16px;
+  min-width: 160px;
+  text-align: center;
+}

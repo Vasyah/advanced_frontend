@@ -1,32 +1,26 @@
-import React, {FC, Suspense} from 'react'
-import '../../index.scss'
-import {Link, Route, Routes} from 'react-router-dom';
+import React, {FC} from 'react'
+import './styles/index.scss'
 import {useTheme} from "app/providers/ThemeProvider";
-import {classNames} from "helpers/classNames";
-import {AboutPage} from "pages/AboutPage/ui/AboutPage";
-import {MainPageLazy} from "pages/MainPage/ui/MainPageLazy";
+import {classNames} from "shared/lib/classNames/classNames";
+import {AppRouter} from "app/providers/Router";
+import {Navbar} from "widgets/Navbar";
+import {Sidebar} from "widgets/Sidebar/ui/Sidebar/Sidebar";
 
 export interface IApp {
 }
 
 
 export const App: FC<IApp> = (props: IApp) => {
-    const {theme, toggleTheme} = useTheme()
+    const {theme} = useTheme()
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <button onClick={toggleTheme}>Toggle theme</button>
-            <Link to={'/'}>Main page</Link>
-            <hr/>
-            <Link to={'/about'}>About page</Link>
-            <hr/>
-            <br/>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={'about'} element={<AboutPage/>}/>
-                    <Route path={'/'} element={<MainPageLazy/>}/>
-                </Routes>
-            </Suspense>
+            <Navbar/>
+            <div className={'content'}>
+                <Sidebar/>
+                <AppRouter/>
+            </div>
+
         </div>
     );
 };

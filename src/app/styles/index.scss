@@ -6,8 +6,19 @@
 .app {
   font: var(--font-l);
 
-  background: var(--bg-color);
+
   color: var(--primary-color);
 
   min-height: 100vh;
+}
+
+.content {
+  display: flex;
+}
+
+.page-layout {
+  padding: 20px;
+  flex: 1;
+  min-height: calc(100vh - var(--navbar-height));
+  background: var(--bg-color);
 }

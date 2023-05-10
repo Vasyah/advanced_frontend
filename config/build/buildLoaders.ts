@@ -4,6 +4,15 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 // порядок лоэдеров имеет значение!
 export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
+    const imageLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    }
+
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -36,8 +45,15 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
         exclude: /node_modules/,
     }
 
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
     return [
         typescriptLoader,
-        cssLoader
+        cssLoader,
+        svgLoader,
+        imageLoader
     ]
 }

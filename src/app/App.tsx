@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react'
 import './styles/index.scss'
 import {useTheme} from "app/providers/ThemeProvider";
 import {classNames} from "shared/lib/classNames/classNames";
@@ -8,7 +8,6 @@ import {Sidebar} from "widgets/Sidebar/ui/Sidebar/Sidebar";
 
 export interface IApp {
 }
-
 
 export const App: FC<IApp> = (props: IApp) => {
     const {theme} = useTheme()

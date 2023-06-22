@@ -1,1 +1,3 @@
-export const multiply = (): void => console.log('function')
+export const multiply = (): void => {
+	console.log('function')
+}

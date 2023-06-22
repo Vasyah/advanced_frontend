@@ -1,12 +1,9 @@
 import React, { FC } from 'react'
 
-export interface IAboutPage {
-}
+export type IAboutPage = Record<string, unknown>
 
-export const AboutPage: FC<IAboutPage> = (props: IAboutPage) => {
-    return (
-        <div>
-            AboutPage
-        </div>
-    );
-};
+export const AboutPage: FC<IAboutPage> = (props: IAboutPage) => (
+	<div>
+		AboutPage
+	</div>
+)

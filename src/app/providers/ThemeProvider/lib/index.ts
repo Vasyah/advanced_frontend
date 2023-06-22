@@ -1,2 +1,2 @@
-export {Theme, ThemeContext} from './ThemeContext'
-export {useTheme} from './useTheme'
+export { Theme, ThemeContext } from './ThemeContext'
+export { useTheme } from './useTheme'

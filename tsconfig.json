@@ -27,10 +27,25 @@
     "typeRoots": [
       "./src/@types",
       "./node_modules/@types"
+    ],
+    "lib": [
+      "decorators",
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015",
+      "ES2017.object"
     ]
   },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+    "src/**/*.jsx"
+  ],
   "ts-node": {
     "compilerOptions": {
+      "strictNullChecks": false,
       "module": "CommonJS"
     }
   }

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    // add all files in which you see the "parserOptions.project" error
+    "**.js",
+    "**.jsx",
+    "**.json",
+    "**.ts",
+    "**.tsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+    "src/**/*.jsx"
+  ]
+}

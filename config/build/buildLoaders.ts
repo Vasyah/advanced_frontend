@@ -64,6 +64,7 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
 		typescriptLoader,
 		cssLoader,
 		svgLoader,
+		babelLoader,
 		imageLoader,
 	]
 }

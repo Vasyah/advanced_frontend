@@ -4,6 +4,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
+		jest: true,
 	},
 
 	extends: ['airbnb', 'airbnb-typescript', 'plugin:i18next/recommended'],
@@ -49,7 +50,7 @@ module.exports = {
 		'react/destructuring-assignment': 'warn',
 		'react/react-in-jsx-scope': 'off',
 		'no-useless-escape': 'off',
-		'max-len': 'off',
+		'max-len': ['error', { code: 140, ignoreComments: true }],
 		'import/no-extraneous-dependencies': 'off',
 		'i18next/no-literal-string': 'off',
 	},

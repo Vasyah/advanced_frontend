@@ -6,10 +6,19 @@
     "**.jsx",
     "**.json",
     "**.ts",
+    "**.config.ts",
     "**.tsx",
     "src/**/*.ts",
     "src/**/*.js",
     "src/**/*.tsx",
-    "src/**/*.jsx"
+    "src/**/*.jsx",
+    "config/**/*.ts",
+    "config/**/*.js",
+    "config/**/*.tsx",
+    "config/**/*.jsx",
+    "config/*.ts",
+    "config/*.js",
+    "config/*.tsx",
+    "config/*.jsx"
   ]
 }

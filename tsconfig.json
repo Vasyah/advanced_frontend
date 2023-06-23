@@ -34,9 +34,10 @@
       "es5",
       "scripthost",
       "es2015",
-      "ES2017.object"
+      "ES2017.object",
     ]
   },
+  "resolveJsonModule": true,
   "include": [
     "src/**/*.ts",
     "src/**/*.js",

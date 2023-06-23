@@ -51,6 +51,6 @@ module.exports = {
 		'no-useless-escape': 'off',
 		'max-len': 'off',
 		'import/no-extraneous-dependencies': 'off',
-		'i18next/no-literal-string': ['error', { markupOnly: true }],
+		'i18next/no-literal-string': 'off',
 	},
 };

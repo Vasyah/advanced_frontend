@@ -1,8 +1,5 @@
 import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
-import en from 'locales/en.json'
-import ru from 'locales/ru.json'
 
 i18n
 	.use(initReactI18next)
@@ -10,12 +7,16 @@ i18n
 		resources: {
 			en: {
 				translation: {
-					'Welcome to React': 'Welcome to React and react-i18next',
+					MainPage: 'Main Page',
+					AboutPage: 'About Page',
+					NotFoundPage: { title: 'Page Not Found' },
 				},
 			},
 			ru: {
 				translation: {
-					'Welcome to React': 'Welcomasdaeact and react-i18next',
+					MainPage: 'Главная страница',
+					AboutPage: 'Страница информации',
+					NotFoundPage: { title: 'Страница не найдена' },
 				},
 			},
 		},

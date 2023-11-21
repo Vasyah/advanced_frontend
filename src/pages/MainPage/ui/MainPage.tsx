@@ -1,12 +1,14 @@
 import React, { FC } from 'react'
+import { useTranslation } from 'react-i18next';
 
 export type IMainPage = Record<string, unknown>
 
-export const MainPage: FC<IMainPage> = (props: IMainPage) => (
-	<>
-		<button type="button">EN/RU</button>
+export const MainPage: FC<IMainPage> = (props: IMainPage) => {
+	const { t } = useTranslation();
+
+	return (
 		<div>
-			MainPage
+			{t('MainPage')}
 		</div>
-	</>
-)
+	)
+}

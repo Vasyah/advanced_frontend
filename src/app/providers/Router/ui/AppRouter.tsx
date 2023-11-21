@@ -16,7 +16,14 @@ export const AppRouter: FC<IAppRouter> = (props: IAppRouter) => (
 					key={path}
 					path={path}
 					element={(
-						<Suspense fallback={<LoaderPage />}>
+						<Suspense fallback={(
+							<div
+								className="page-layout"
+							>
+								<LoaderPage />
+							</div>
+						)}
+						>
 							<div
 								className="page-layout"
 							>

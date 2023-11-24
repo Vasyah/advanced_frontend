@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
 	// All imported modules in your tests should be mocked automatically
 	// automock: false,
@@ -42,8 +44,9 @@ export default {
 	],
 	// для подхватывания методов DOM для тестирования
 	setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
-	// для обработки css модулей
+	// маппер позволяет для файлов с указанным расширением делать заглушки
 	moduleNameMapper: {
 		'\\.s?css$': 'identity-obj-proxy',
+		'\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
 	},
 };

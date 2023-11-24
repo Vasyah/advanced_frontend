@@ -40,4 +40,10 @@ export default {
 	modulePaths: [
 		'<rootDir>src',
 	],
+	// для подхватывания методов DOM для тестирования
+	setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+	// для обработки css модулей
+	moduleNameMapper: {
+		'\\.s?css$': 'identity-obj-proxy',
+	},
 };

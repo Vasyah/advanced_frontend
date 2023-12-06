@@ -7,7 +7,7 @@ module.exports = {
 		jest: true,
 	},
 
-	extends: ['airbnb', 'airbnb-typescript', 'plugin:i18next/recommended'],
+	extends: ['airbnb', 'airbnb-typescript', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
 	overrides: [
 		{
 			env: {
@@ -52,6 +52,6 @@ module.exports = {
 		'no-useless-escape': 'off',
 		'max-len': ['error', { code: 140, ignoreComments: true }],
 		'import/no-extraneous-dependencies': 'off',
-		'i18next/no-literal-string': 'off',
+		'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }],
 	},
 };

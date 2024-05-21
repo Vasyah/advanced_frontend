@@ -12,6 +12,7 @@ i18n
 					MainPage: 'Main Page',
 					AboutPage: 'About Page',
 					NotFoundPage: { title: 'Page Not Found' },
+					UnexpectedError: 'UnexpectedError',
 				},
 			},
 			ru: {
@@ -19,6 +20,8 @@ i18n
 					MainPage: 'Главная страница',
 					AboutPage: 'Страница информации',
 					NotFoundPage: { title: 'Страница не найдена' },
+					UnexpectedError: 'Ууупс, произошла непредвиденная ошибка!',
+
 				},
 			},
 		},

@@ -4,18 +4,23 @@
 @import 'themes/dark';
 
 .app {
-  font: var(--font-l);
-  color: var(--primary-color);
-  min-height: 100vh;
+    font: var(--font-l);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
 }
 
 .content {
-  display: flex;
+    display: flex;
 }
 
 .page-layout {
-  padding: 20px;
-  flex: 1;
-  min-height: calc(100vh - var(--navbar-height));
-  background: var(--bg-color);
+    padding: 20px;
+    flex: 1;
+    min-height: calc(100vh - var(--navbar-height));
+    background: var(--bg-color);
+}
+
+#storybook-root {
+    width: 100%;
 }
